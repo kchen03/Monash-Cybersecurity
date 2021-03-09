@@ -221,7 +221,9 @@ The machines on the internal network are not exposed to the public Internet.
 Only the **host** machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 
 - IP address of Home Machine (14.202.30.45)
-- IP of Web-1 (10.1.0.4), Web-2 (10.1.0.9) and Web-3 (10.1.0.10)
+- Web-1 (10.1.0.4)
+- Web-2 (10.1.0.9)
+- Web-3 (10.1.0.10)
 
 Machines within the network can only be accessed by **the Jump box machine.**
 
@@ -245,12 +247,13 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
 The playbook implements the following tasks:
 
-- In the Install ELK.yml: the following steps are:
-- install docker
-- instal python3
-- increase virtual memory mmap count to 262144
-- adding the list of ports that ELK can run on: 5601, 9200 5044
-- enabling docker start on boot
+In the Install ELK.yml: the following steps are:
+- Install Docker
+- Instal Python3
+- Install Docker Python Module
+- Increase virtual memory to support ELK stack
+- Adding the list of ports that ELK can run on: 5601, 9200 5044
+- Download ELk and launch ELK
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
